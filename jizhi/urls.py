@@ -15,11 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from edu_app import views
-from edu_web import views
+from edu_app import views as app_view
+from edu_web import views as web_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('app/', include('edu_app.urls')),
-    path('web/', include('edu_web.urls')),
+    path('', include('edu_web.urls')),
+    # path('app/', web_view.indexAdmin),                 #这个是直接分配到某个app下
+    # path('/',app_view.类.as_view(),name="xxxx")        #这个是用某个类的函数
 ]
