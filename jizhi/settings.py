@@ -24,7 +24,11 @@ SECRET_KEY = '#_n*2%cwn30!!#)v^jbake!bwauzd=v0usq58l_or1yf8h1gyl'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'web.jizhi.com',
+    'app.jizhi.com',
+    'www.jizhi.com',
+]
 
 # Application definition
 
@@ -36,8 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'edu_web.apps.EduWebConfig',
-    'edu_app.apps.EduAppConfig'
-    'django_hosts'
+    'edu_app.apps.EduAppConfig',
+    'django_hosts',
 ]
 
 MIDDLEWARE = [
