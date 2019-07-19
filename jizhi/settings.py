@@ -37,9 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'edu_web.apps.EduWebConfig',
     'edu_app.apps.EduAppConfig'
+    'django_hosts'
 ]
 
 MIDDLEWARE = [
+    'django_hosts.middleware.HostsRequestMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -47,7 +49,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django_hosts.middleware.HostsRequestMiddleware',
 ]
+ROOT_HOSTCONF = 'jizhi.hosts' # 模块的路径，不是域名
+DEFAULT_HOST = 'www' # Name of the default host, we will create it in the next steps
 
 ROOT_URLCONF = 'jizhi.urls'
 
