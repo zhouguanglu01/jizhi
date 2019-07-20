@@ -28,6 +28,7 @@ ALLOWED_HOSTS = [
     'web.jizhi.com',
     'app.jizhi.com',
     'www.jizhi.com',
+    '127.0.0.1',
 ]
 
 # Application definition
