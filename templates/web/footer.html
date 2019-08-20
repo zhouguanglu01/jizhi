@@ -1,0 +1,44 @@
+
+<footer class="footer navbar-fixed-bottom main-footer">
+    <div class="container ">
+        <p >
+            {% for item in footer_site %}
+                {% if not forloop.last%}
+                    {% for key,value in item.items %}
+                        <a target="_blank" href={{ value }}>
+                            {{ key }}
+                        </a>
+                        <span >
+                                |
+                        </span>
+                    {% endfor %}
+                {% else %}
+                    {% for key,value in item.items %}
+                        <a target="_blank" href={{ value }} >
+                            {{ key }}
+                        </a>
+                    {% endfor %}
+                {% endif %}
+            {% endfor %}
+        </p>
+        <p class="copyright">
+            客服电话：
+            <strong >
+                17741779847
+            </strong>
+
+                Copyright © 2019-2020  {{ web_name }} {{ web_site }} {{company_name}} 版权所有
+
+        </p>
+        <p>
+
+          违法和不良信息举报电话：{{ jubaodianhua }}
+          地址：{{ company_site }}  {{ zhenghao }}
+
+        </p>
+        <p >
+            这里添加一些照片
+        </p>
+
+    </div>
+</footer>
